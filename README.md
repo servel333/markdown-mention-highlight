@@ -31,8 +31,8 @@ Or via the UI: open the Extensions panel, click the `...` menu, and choose **Ins
 
 ## Configuration
 
-| Setting | Type | Default | Description |
-|---|---|---|---|
+| Setting                  | Type     | Default   | Description |
+|--------------------------|----------|-----------|-------------|
 | `mentionHighlight.color` | `string` | `#9b8fbf` | Hex color used to highlight `@mentions` in Markdown files |
 
 Change the color in your VS Code settings:
@@ -50,7 +50,6 @@ After changing the color, VS Code will prompt you to reload the window for the t
 **Prerequisites:** Node.js, npm, VS Code
 
 ```sh
-cd markdown-mention-highlight
 npm install
 ```
 
