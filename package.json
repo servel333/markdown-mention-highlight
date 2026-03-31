@@ -4,6 +4,7 @@
   "description": "Highlights @mentions in Markdown files with a configurable color",
   "version": "0.1.0",
   "publisher": "nathaniel-perry-and-claude-sonnet-4-6",
+  "repository": "NONE",
   "engines": {
     "vscode": "^1.85.0"
   },
