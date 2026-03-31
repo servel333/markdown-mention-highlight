@@ -9,7 +9,7 @@ default: help
 help: #   ".......10|.......20|.......30|.......40|.......50|.......60|
 	@echo "Available targets:"
 	@echo "  make build             # Compile TypeScript"
-	@echo "  make watch             # Compile TypeScript in watch mode"
+	@echo "  make watch             # Compile and watch for changes"
 	@echo "  make package           # Build and package into .vsix"
 	@echo "  make install           # Package and install into VS Code"
 	@echo "  make uninstall         # Uninstall extension from VS Code"
