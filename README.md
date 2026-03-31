@@ -12,22 +12,12 @@ A VS Code extension that highlights `@mentions` in Markdown files with a configu
 
 This extension is distributed as a `.vsix` file for local installation.
 
-**Build the `.vsix`:**
-
 ```sh
-cd markdown-mention-highlight
 npm install
-npm run compile
-npx vsce package --no-dependencies
+make install
 ```
 
-**Install in VS Code:**
-
-```sh
-code --install-extension markdown-mention-highlight-0.1.0.vsix
-```
-
-Or via the UI: open the Extensions panel, click the `...` menu, and choose **Install from VSIX...**.
+Or via the UI after `make package`: open the Extensions panel, click the `...` menu, and choose **Install from VSIX...**.
 
 ## Configuration
 
@@ -53,8 +43,8 @@ After changing the color, VS Code will prompt you to reload the window for the t
 npm install
 ```
 
-- **Compile:** `npm run compile`
-- **Watch mode:** `npm run watch`
+- **Compile:** `make build`
+- **Watch mode:** `make watch` (or `make watch-bg` to background it)
 
 ### Testing in the Extension Development Host
 
