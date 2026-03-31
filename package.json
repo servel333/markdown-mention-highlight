@@ -4,7 +4,7 @@
   "description": "Highlights @mentions in Markdown files with a configurable color",
   "version": "0.1.2",
   "publisher": "nathaniel-perry-and-claude-sonnet-4-6",
-  "repository": "NONE",
+  "repository": "https://github.com/servel333/markdown-mention-highlight",
   "engines": {
     "vscode": "^1.85.0"
   },
