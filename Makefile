@@ -44,7 +44,7 @@ uninstall:
 	code --uninstall-extension $(shell node -p "const p=require('./package.json'); p.publisher+'.'+p.name")
 
 watch   : ; npm run watch
-watch-bg: ; npm run watch & echo $$! > $(WATCH_PID)
+watch-bg: ; npx tsc --watch --preserveWatchOutput -p ./ & echo $$! > $(WATCH_PID)
 
 watch-dt:
 	@if [ -f $(WATCH_PID) ] && kill -0 $$(cat $(WATCH_PID)) 2>/dev/null; then \
