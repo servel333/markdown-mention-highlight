@@ -66,7 +66,9 @@ npm install
 
 ## How It Works
 
-The extension injects a TextMate grammar into `text.html.markdown` that matches the pattern `@[\w_-]+` and assigns it the scope `entity.name.tag.mention.markdown`. On activation, it writes a token color rule for that scope into your global `editor.tokenColorCustomizations` setting using the configured color.
+The extension injects a TextMate grammar into `text.html.markdown` (excluding code blocks and inline code) that matches the pattern `@[\w_-]+` and assigns it the scope `markup.mention.markdown`. On activation, it writes a token color rule for that scope into your global `editor.tokenColorCustomizations` setting using the configured color.
+
+The scope `markup.mention.markdown` is intentionally generic — using a scope like `entity.name.tag` would cause themes to apply their own color (typically blue) rather than the configured one.
 
 ## Requirements
 
