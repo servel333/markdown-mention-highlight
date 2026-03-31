@@ -2,7 +2,23 @@ NAME    := $(shell node -p "require('./package.json').name")
 VERSION := $(shell node -p "require('./package.json').version")
 VSIX    := $(NAME)-$(VERSION).vsix
 
-.PHONY: build watch package install uninstall clean
+.PHONY: build clean help install package uninstall watch
+
+default: help
+
+help: #   ".......10|.......20|.......30|.......40|.......50|.......60|
+	@echo "Available targets:"
+	@echo "  make build             # Compile TypeScript"
+	@echo "  make watch             # Compile TypeScript in watch mode"
+	@echo "  make package           # Build and package into .vsix"
+	@echo "  make install           # Package and install into VS Code"
+	@echo "  make uninstall         # Uninstall extension from VS Code"
+	@echo "  make clean             # Remove build artifacts and .vsix"
+	@echo ""
+	@echo "  Debugging:"
+	@echo "    NAME    = $(NAME)"
+	@echo "    VERSION = $(VERSION)"
+	@echo "    VSIX    = $(VSIX)"
 
 build:
 	npm run compile
