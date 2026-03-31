@@ -1,0 +1,10 @@
+{
+  "scopeName": "mention.markdown",
+  "injectionSelector": "L:text.html.markdown",
+  "patterns": [
+    {
+      "name": "entity.name.tag.mention.markdown",
+      "match": "@[\\w_-]+"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "markdown-mention-highlight",
+  "displayName": "Markdown Mention Highlight",
+  "description": "Highlights @mentions in Markdown files with a configurable color",
+  "version": "0.1.0",
+  "publisher": "nathaniel-perry-and-claude-sonnet-4-6",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "grammars": [
+      {
+        "path": "./syntaxes/mention.tmLanguage.json",
+        "scopeName": "mention.markdown",
+        "injectTo": ["text.html.markdown"]
+      }
+    ],
+    "configuration": {
+      "title": "Mention Highlight",
+      "properties": {
+        "mentionHighlight.color": {
+          "type": "string",
+          "default": "#9b8fbf",
+          "description": "Color used to highlight @mentions in Markdown files"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  }
+}
