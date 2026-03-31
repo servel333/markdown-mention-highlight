@@ -2,7 +2,7 @@
   "name": "markdown-mention-highlight",
   "displayName": "Markdown Mention Highlight",
   "description": "Highlights @mentions in Markdown files with a configurable color",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "nathaniel-perry-and-claude-sonnet-4-6",
   "repository": "NONE",
   "engines": {

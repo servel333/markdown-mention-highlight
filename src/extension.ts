@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 
-const MENTION_SCOPE = 'entity.name.tag.mention.markdown';
+const MENTION_SCOPE = 'markup.mention.markdown';
 const COLOR_SETTING = 'mentionHighlight.color';
 
 function applyMentionColor(color: string): void {
