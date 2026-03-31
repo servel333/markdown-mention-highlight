@@ -26,7 +26,17 @@ help: #   ".......10|.......20|.......30|.......40|.......50|.......60|
 	@echo "    VSIX    = $(VSIX)"
 
 build: ; npm run compile
-clean: ; rm -rf out $(VSIX)
+
+clean:
+	rm -rf out
+	rm -f $(VSIX)
+	@if [ -f $(WATCH_PID) ] && kill -0 $$(cat $(WATCH_PID)) 2>/dev/null; then \
+			echo "Skipping $(WATCH_LOG) — watcher is running"; \
+	else \
+			echo "rm -f $(WATCH_LOG)"; \
+			rm -f $(WATCH_LOG); \
+	fi
+
 install: package ; code --install-extension $(VSIX)
 package: build ; npx vsce package
 
